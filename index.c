@@ -258,44 +258,44 @@
 // them B greater equal to than 60 give them C else give D
 
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main()
-{
-    float physics, chemistry, maths, computerScience, English;
-    printf("\nEnter marks of physics : ");
-    scanf("%f", &physics);
-    printf("\nEnter marks of chemistry : ");
-    scanf("%f", &chemistry);
-    printf("\nEnter marks of maths : ");
-    scanf("%f", &maths);
-    printf("\nEnter marks of computerScience : ");
-    scanf("%f", &computerScience);
-    printf("\nEnter marks of English : ");
-    scanf("%f", &English);
+// int main()
+// {
+//     float physics, chemistry, maths, computerScience, English;
+//     printf("\nEnter marks of physics : ");
+//     scanf("%f", &physics);
+//     printf("\nEnter marks of chemistry : ");
+//     scanf("%f", &chemistry);
+//     printf("\nEnter marks of maths : ");
+//     scanf("%f", &maths);
+//     printf("\nEnter marks of computerScience : ");
+//     scanf("%f", &computerScience);
+//     printf("\nEnter marks of English : ");
+//     scanf("%f", &English);
 
-    float sum = physics + maths + computerScience + chemistry + English;
-    float percentage = sum / 5;
+//     float sum = physics + maths + computerScience + chemistry + English;
+//     float percentage = sum / 5;
 
-    if (percentage >= 90)
-    {
-        printf("you got grade 'A' with %.2f", percentage);
-    }
-    else if (percentage >= 80)
-    {
-        printf("you got grade 'B' with %.2f", percentage);
-    }
-    else if (percentage >= 60)
-    {
-        printf("you got grade 'C' with %.2f", percentage);
-    }
-    else
-    {
-        printf("you got grade 'D' with %.2f", percentage);
-    }
+//     if (percentage >= 90)
+//     {
+//         printf("you got grade 'A' with %.2f", percentage);
+//     }
+//     else if (percentage >= 80)
+//     {
+//         printf("you got grade 'B' with %.2f", percentage);
+//     }
+//     else if (percentage >= 60)
+//     {
+//         printf("you got grade 'C' with %.2f", percentage);
+//     }
+//     else
+//     {
+//         printf("you got grade 'D' with %.2f", percentage);
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
 
 
 
@@ -587,16 +587,16 @@ int main()
 //     return 0;
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main()
-{
-    int arr[8], len = 8;
-    for (int i = 0; i < len; i++)
-    {
-        printf("Enter a decimal number: ");
-        scanf("%d", &arr[i]);
-    }
+// int main()
+// {
+//     int arr[8], len = 8;
+//     for (int i = 0; i < len; i++)
+//     {
+//         printf("Enter a decimal number: ");
+//         scanf("%d", &arr[i]);
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
