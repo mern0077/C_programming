@@ -822,3 +822,543 @@
 // }
 
 
+
+
+
+// =========================================================================================================
+
+// question 23
+// we will find out index using search, we use linear search
+// which traverse each array if array[c] equal to search print i
+// else print "not found"
+
+// #include <stdio.h>
+// int main()
+// {
+//     int array[100], search, c, number;
+//     printf("Enter the number of elements in array\n");
+//     scanf("%d", &number);
+//     printf("Enter %d numbers\n", number);
+//     for (c = 0; c < number; c++)
+//         scanf("%d", &array[c]);
+//     printf("Enter the number to search\n");
+//     scanf("%d", &search);
+//     for (c = 0; c < number; c++)
+//     {
+//         if (array[c] == search)
+//         {
+//             printf("%d is present at location %d.\n", search, c + 1);
+//             break;
+//         }
+//     }
+//     if (c == number)
+//         printf("%d is not present in array.\n", search);
+//     return 0;
+// }
+
+// =========================================================================================================
+
+// question 24
+// Compare and swap the adjacent elements if they are in the wrong order starting from the first two elements.
+// Do that for all elements moving from left to right. We will get the largest element at the right end.
+
+// #include <stdio.h>
+
+// void swap(int *arr, int i, int j)
+// {
+//     int temp = arr[i];
+//     arr[i] = arr[j];
+//     arr[j] = temp;
+// }
+
+// void bubbleSort(int arr[], int n)
+// {
+//     for (int i = 0; i < n - 1; i++)
+//     {
+//         for (int j = 0; j < n - i - 1; j++)
+//         {
+//             if (arr[j] > arr[j + 1])
+//                 swap(arr, j, j + 1);
+//         }
+//     }
+// }
+
+// int main()
+// {
+//     int arr[] = {6, 0, 3, 5};
+//     int n = sizeof(arr) / sizeof(arr[0]);
+
+//     // Calling bubble sort on array arr
+//     bubbleSort(arr, n);
+
+//     for (int i = 0; i < n; i++)
+//         printf("%d ", arr[i]);
+
+//     return 0;
+// }
+
+// =========================================================================================================
+
+// question 25
+// add and multiply two compatible matrices
+// I add and multiply when arr1[i][j]==arr2[i][j]
+
+// #include <stdio.h>
+// #include <conio.h>
+// void main()
+// {
+//     int a[3][3], b[3][3], c[3][3] = {0}, d[3][3] = {0};
+//     int i, j, k, m, n, p, q;
+//     printf("Enter no. of rows and columns in matrix A: ");
+//     scanf("%d%d", &m, &n);
+//     printf("Enter no. of rows and columns in matrix B: ");
+//     scanf("%d%d", &p, &q);
+//     if (m != p || n != q)
+//     {
+//         printf("Matrix Addition is not possible");
+//         return;
+//     }
+//     else if (n != p)
+//     {
+//         printf("Matrix Multiplication is not possible");
+//         return;
+//     }
+//     else
+//     {
+//         printf("Enter elements of matrix A: ");
+//         for (i = 0; i < m; i++)
+//             for (j = 0; j < n; j++)
+//                 scanf("%d", &a[i][j]);
+//         printf("Enter elements of matrix B: ");
+//         for (i = 0; i < p; i++)
+//             for (j = 0; j < q; j++)
+//                 scanf("%d", &b[i][j]);
+//         // Matrix Addition
+//         for (i = 0; i < m; i++)
+//             for (j = 0; j < n; j++)
+//                 c[i][j] = a[i][j] + b[i][j];
+//         printf("\nResult of Matirx Addition:\n");
+//         for (i = 0; i < m; i++)
+//         {
+//             for (j = 0; j < n; j++)
+//                 printf("%d ", c[i][j]);
+//             printf("\n");
+//         }
+//         // Matrix Multiplication
+//         for (i = 0; i < m; i++)
+//             for (j = 0; j < q; j++)
+//                 for (k = 0; k < p; k++)
+//                     d[i][j] += a[i][k] * b[k][j];
+//         printf("\nResult of Matirx Multiplication:\n");
+//         for (i = 0; i < m; i++)
+//         {
+//             for (j = 0; j < q; j++)
+//                 printf("%d ", d[i][j]);
+//             printf("\n");
+//         }
+//     }
+//     getch();
+// }
+
+
+// =========================================================================================================
+
+// question 26
+
+// we added digonal matrix and off-diognal matrix
+
+// #include <stdio.h>
+
+// int main()
+// {
+
+//     int i, j, m = 3, n = 3, a = 0, sum = 0;
+
+//     int matrix[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+
+//     if (m == n)
+//     {
+
+//         printf("The matrix is \n");
+
+//         for (i = 0; i < m; ++i)
+//         {
+
+//             for (j = 0; j < n; ++j)
+//             {
+//                 printf(" %d", matrix[i][j]);
+//             }
+//             printf("\n");
+//         }
+//         for (i = 0; i < m; ++i)
+//         {
+
+//             sum = sum + matrix[i][i];
+
+//             a = a + matrix[i][m - i - 1];
+//         }
+
+//         printf("\nMain diagonal elements sum is = %d\n", sum);
+//         printf("Off-diagonal elements sum is = %d\n", a);
+//     }
+//     else
+
+//         printf("not a square matrix\n");
+//     return 0;
+// }
+
+
+// =========================================================================================================
+
+// question 27
+
+// strlen is build in function which is use for find length of char,
+// strcpy is build in function which is use for copy value into  other char,
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     char str[] = "Hello, World!";
+//     int len = strlen(str);
+//     printf("The length of the string is: %d", len);
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     char src[] = "Hello, World!";
+//     char dest[20];
+//     strcpy(dest, src);
+//     printf("The copied string is: %s", dest);
+//     return 0;
+
+
+// =========================================================================================================
+
+// question 28
+
+// this is project.
+
+// Train no: int
+
+// Train NAME: String
+
+// Departure Time: Aggregate type TIME
+
+// Arrival time: Aggregate type TIME
+
+// Strat Station: String
+
+// End Station: String
+
+// #include <stdio.h>
+// #include <string.h>
+
+// #define MAX 50
+
+// typedef struct TIME
+// {
+//     int hour;
+//     int minute;
+// } TIME;
+
+// typedef struct TRAIN_INFO
+// {
+//     int train_no;
+//     char train_name[35];
+//     char start_st[35];
+//     char end_st[35];
+//     TIME dept_time;
+//     TIME arr_time;
+// } TRAIN;
+
+// void train_edit(TRAIN *, int *);
+
+// int main(void)
+// {
+//     int no_of_trains = 0;
+//     int i;
+//     int choice;
+//     char dept_st[35];
+//     char arr_st[35];
+//     TIME train_time;
+//     TRAIN train[MAX];
+
+//     train_edit(train, &no_of_trains);
+
+//     while (1)
+//     {
+//         // Display Main Menu
+//         printf("\t\t\t * ***MENU * ***\n");
+//         printf("1. List all the trains departed from a particular station.\n");
+//         printf("2. List all the trains departed from a particular station at a particular time.\n");
+//         printf("3. List all the trains departed from particular station within the next one hour of a given time.\n");
+//         printf("4. List all the trains between a pair of start station and end station.\n");
+//         printf("5. Edit train details.\n");
+//         printf("6. Exit.\n");
+//         printf("Your choice : ");
+
+//         // Input choice
+//         scanf("%d", &choice);
+
+//         switch (choice)
+//         {
+//         case 1:
+//             printf("\n\t\t * ***INPUT DETAILS * ***\n");
+//             printf("Depart Station : ");
+//             getchar(); // Clear the newline left by previous scanf
+//             fgets(dept_st, sizeof(dept_st), stdin);
+//             dept_st[strcspn(dept_st, "\n")] = 0;
+
+//             // Print trains
+//             for (i = 0; i < no_of_trains; i++)
+//             {
+//                 if (strcmp(train[i].start_st, dept_st) == 0)
+//                 {
+//                     printf("%d\t\t%s\t%s\t%s\t%d:%d\t%d:%d\n", train[i].train_no, train[i].train_name,
+//                            train[i].start_st, train[i].end_st, train[i].dept_time.hour,
+//                            train[i].dept_time.minute, train[i].arr_time.hour, train[i].arr_time.minute);
+//                 }
+//             }
+//             break;
+//         case 2:
+//             printf("\n\t\t * ***INPUT DETAILS * ***\n");
+//             printf("Depart Station : ");
+//             getchar();
+//             fgets(dept_st, sizeof(dept_st), stdin);
+//             dept_st[strcspn(dept_st, "\n")] = 0;
+//             printf("Train Time : \n");
+//             printf("Hour : ");
+//             scanf("%d", &train_time.hour);
+//             printf("Minute : ");
+//             scanf("%d", &train_time.minute);
+
+//             // Print trains
+//             for (i = 0; i < no_of_trains; i++)
+//             {
+//                 if (strcmp(train[i].start_st, dept_st) == 0 && train[i].dept_time.hour == train_time.hour && train[i].dept_time.minute == train_time.minute)
+//                 {
+//                     printf("%d\t\t%s\t%s\t%s\t%d:%d\t%d:%d\n", train[i].train_no,
+//                            train[i].train_name, train[i].start_st, train[i].end_st,
+//                            train[i].dept_time.hour, train[i].dept_time.minute,
+//                            train[i].arr_time.hour, train[i].arr_time.minute);
+//                 }
+//             }
+//             break;
+//         // Add the other cases as they are
+//         case 6:
+//             return 0;
+//         default:
+//             printf("\nError! Wrong Choice.\n\n");
+//         }
+//     }
+//     return 0;
+// }
+
+// void train_edit(TRAIN *train, int *no_of_trains)
+// {
+//     int choice, i, train_num;
+//     TRAIN temp;
+//     while (1)
+//     {
+//         printf("\t\t * ***TRAIN EDIT MENU * ***\n");
+//         printf("1. Add Train.\n");
+//         printf("2. Delete Train.\n");
+//         printf("3. Exit Train Edit Menu.\n");
+//         printf("Your Choice : ");
+//         scanf("%d", &choice);
+
+//         switch (choice)
+//         {
+//         case 1:
+//             if (*no_of_trains >= MAX)
+//             {
+//                 printf("\nError! There are already maximum trains.\n\n");
+//                 break;
+//             }
+
+//             printf("\nInput Train Number : ");
+//             scanf("%d", &temp.train_no);
+
+//             for (i = 0; i < *no_of_trains; i++)
+//             {
+//                 if (train[i].train_no == temp.train_no)
+//                 {
+//                     printf("Error! Train number %d already exists. Please try again.\n\n", temp.train_no);
+//                     break;
+//                 }
+//             }
+//             if (i != *no_of_trains)
+//                 break;
+
+//             printf("Input Train Name : ");
+//             getchar(); // Clear the newline left by previous scanf
+//             fgets(temp.train_name, sizeof(temp.train_name), stdin);
+//             temp.train_name[strcspn(temp.train_name, "\n")] = 0;
+
+//             printf("Input Start Station : ");
+//             fgets(temp.start_st, sizeof(temp.start_st), stdin);
+//             temp.start_st[strcspn(temp.start_st, "\n")] = 0;
+
+//             printf("Input End Station : ");
+//             fgets(temp.end_st, sizeof(temp.end_st), stdin);
+//             temp.end_st[strcspn(temp.end_st, "\n")] = 0;
+
+//             printf("Input Departure Time : \n");
+//             printf("Hour : ");
+//             scanf("%d", &temp.dept_time.hour);
+//             printf("Minute : ");
+//             scanf("%d", &temp.dept_time.minute);
+
+//             printf("Input Arrival Time : \n");
+//             printf("Hour : ");
+//             scanf("%d", &temp.arr_time.hour);
+//             printf("Minute : ");
+//             scanf("%d", &temp.arr_time.minute);
+
+//             train[*no_of_trains] = temp;
+//             (*no_of_trains)++;
+
+//             printf("Train %d added successfully.\n\n", temp.train_no);
+//             break;
+//         case 2:
+//             if (*no_of_trains == 0)
+//             {
+//                 printf("\nError! No Train Available.\n\n");
+//                 break;
+//             }
+
+//             printf("\nInput Train Number : ");
+//             scanf("%d", &train_num);
+
+//             for (i = 0; i < *no_of_trains; i++)
+//             {
+//                 if (train[i].train_no == train_num)
+//                 {
+//                     for (int j = i; j < *no_of_trains - 1; j++)
+//                     {
+//                         train[j] = train[j + 1];
+//                     }
+//                     (*no_of_trains)--;
+//                     printf("Train %d deleted successfully.\n\n", train_num);
+//                     break;
+//                 }
+//             }
+//             break;
+//         case 3:
+//             return;
+//         default:
+//             printf("\nError! Wrong Choice.\n\n");
+//         }
+//     }
+// }
+
+
+// =========================================================================================================
+
+// question 29
+
+// #include <stdio.h>
+// #include <string.h>
+// #include <stdlib.h>
+
+// void compareFiles(FILE *file1, FILE *file2)
+// {
+//     char ch1 = getc(file1);
+//     char ch2 = getc(file2);
+//     int error = 0, pos = 0, line = 1;
+
+//     while (ch1 != EOF || ch2 != EOF)
+//     {
+//         pos++;
+//         if (ch1 == '\n' && ch2 == '\n')
+//         {
+//             line++;
+//             pos = 0;
+//         }
+
+//         if (ch1 != ch2)
+//         {
+//             error++;
+//             printf("Line Number: %d \tError Position: %d\n", line, pos);
+//         }
+
+//         ch1 = getc(file1);
+//         ch2 = getc(file2);
+//     }
+
+//     printf("Total Errors: %d\n", error);
+// }
+
+// int main()
+// {
+//     FILE *file1 = fopen("file1.txt", "r");
+//     FILE *file2 = fopen("file2.txt", "r");
+
+//     if (file1 == NULL || file2 == NULL)
+//     {
+//         printf("Error: Files not open\n");
+//         exit(0);
+//     }
+
+//     compareFiles(file1, file2);
+
+//     fclose(file1);
+//     fclose(file2);
+
+//     return 0;
+// }
+
+
+
+// =========================================================================================================
+
+// question 30
+
+// #include <stdio.h>
+// #include <string.h>
+
+// void main()
+// {
+//     FILE *filePointer;
+//     int wordExist = 0;
+//     int bufferLength = 255;
+//     char search[100];
+
+//     printf("Enter word to be searched: ");
+//     fgets(search, sizeof(search), stdin);
+//     search[strcspn(search, "\n")] = 0;
+
+//     filePointer = fopen("file.txt", "r");
+//     if (filePointer == NULL)
+//     {
+//         printf("Error opening file.\n");
+//         return;
+//     }
+
+//     char line[bufferLength];
+
+//     while (fgets(line, sizeof(line), filePointer))
+//     {
+//         char *ptr = strstr(line, search);
+//         if (ptr != NULL)
+//         {
+//             wordExist = 1;
+//             break;
+//         }
+//     }
+
+//     fclose(filePointer);
+
+//     if (wordExist == 1)
+//     {
+//         printf("Word exists in the file.\n");
+//     }
+//     else
+//     {
+//         printf("Word doesn't exist in the file.\n");
+//     }
+// }
