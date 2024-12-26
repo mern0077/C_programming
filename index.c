@@ -296,3 +296,307 @@ int main()
 
     return 0;
 }
+
+
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     float val1, val2;
+//     char operator;
+//     printf("Enter value first : ");
+//     scanf("%f", &val1);
+//     printf("Enter operator : ");
+//     scanf("%s", &operator);
+//     printf("Enter value second : ");
+//     scanf("%f", &val2);
+//     switch (operator)
+//     {
+//     case '+':
+//         printf("Addition : %.2f", val1 + val2);
+//         break;
+//     case '-':
+//         printf("Substraction : %.2f", val1 - val2);
+//         break;
+//     case 'x':
+//         printf("Substraction : %.2f", val1 * val2);
+//         break;
+//     case '/':
+//         printf("Substraction : %.2f", val1 / val2);
+//         break;
+
+//     default:
+//         break;
+//     }
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int sum = 0, number;
+//     printf("Enter number (it will give you sum at that number) : ");
+//     scanf("%d", &number);
+//     for (int i = 0; i <= number; i++)
+//     {
+//         sum += i;
+//     }
+//     printf("sum at nth number : %d", sum);
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int sum = 0, number;
+//     printf("Enter number (it will give you sum at that number) : ");
+//     scanf("%d", &number);
+//     for (int i = 0; i <= number; i++)
+//     {
+//         sum += i;
+//     }
+//     printf("sum at nth number : %d", sum);
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int fibo();
+
+// int main()
+// {
+//     int number;
+//     printf("Enter fibonacci number : ");
+//     scanf("%d", &number);
+//     printf("fibonacci value is : %d",fibo(number));
+//     return 0;
+// }
+
+// int fibo(int n)
+// {
+//     if (n == 0 || n == 1)
+//     {
+//         return 1;
+//     }
+//     else
+//     {
+//         int sum = fibo(n - 1) + fibo(n - 2);
+//         return sum;
+//     }
+// }
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int number;
+//     printf("Enter prime number : ");
+//     scanf("%d", &number);
+//     for (int i = 2; i < number; i++)
+//     {
+//         if (number % i != 0)
+//         {
+//             printf("Prime number");
+//             break;
+//         }
+//         else
+//         {
+//             printf("not a prime number");
+//             break;
+//         }
+//     }
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+// #include <string.h>
+
+// // Define the key-value pair structure
+// struct keyValuePair
+// {
+//     char key[50];
+//     int value;
+// };
+
+// int main()
+// {
+//     // Initialize the key-value pairs
+//     struct keyValuePair Pairs[] = {
+//         {"first", 1},
+//         {"second", 2},
+//         {"third", 3},
+//         {"four", 4},
+//         {"five", 5},
+//         {"six", 6},
+//         {"seven", 7},
+//         {"eight", 8},
+//         {"nine", 9},
+//         {"zero", 0},
+//     };
+
+//     char name1[50], name2[50];
+
+//     // Get user input
+//     printf("Enter number in words: ");
+//     scanf("%s", name1); // Take input for the first number
+
+//     printf("Enter number in words: ");
+//     scanf("%s", name2); // Take input for the second number
+
+//     // Find the corresponding values for name1 and name2
+//     int value1 = -1, value2 = -1;
+
+//     // Search for the value of name1
+//     for (int i = 0; i < 10; i++)
+//     {
+//         if (strcmp(Pairs[i].key, name1) == 0)
+//         {
+//             value1 = Pairs[i].value;
+//             break;
+//         }
+//     }
+
+//     // Search for the value of name2
+//     for (int i = 0; i < 10; i++)
+//     {
+//         if (strcmp(Pairs[i].key, name2) == 0)
+//         {
+//             value2 = Pairs[i].value;
+//             break;
+//         }
+//     }
+
+//     // If both values were found, calculate the sum
+//     if (value1 != -1 && value2 != -1)
+//     {
+//         printf("Sum is: %d\n", value1 + value2);
+//     }
+//     else
+//     {
+//         printf("Invalid input. Please enter valid number words.\n");
+//     }
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// void reverseArray(int *arr, int len)
+// {
+//     int start = 0;
+//     int end = len - 1;
+//     while (start < end)
+//     {
+//         int temp = arr[end];   // Save the value at the end
+//         arr[end] = arr[start]; // Assign the value at the start to the end
+//         arr[start] = temp;     // Assign the saved value (temp) to the start
+//         end--;
+//         start++;
+//     }
+// }
+
+// void printArray(int *arr, int len)
+// {
+//     for (int i = 0; i < len; i++)
+//     {
+//         printf("%d ", arr[i]); // Corrected format for printing
+//     }
+//     printf("\n");
+// }
+
+// int main()
+// {
+//     int arr[5] = {1, 4, 5, 7, 3};
+//     int len = 5;
+//     reverseArray(arr, len); // Reverse the array and print it
+//     printArray(arr, len);
+//     return 0;
+// }
+
+// #include <stdio.h>
+// #include <math.h>
+// #include <string.h>
+
+// // Function to convert binary to decimal
+// int binaryToDecimal(char *binary)
+// {
+//     int decimal = 0;
+//     int length = strlen(binary);
+
+//     // Loop through the binary string
+//     for (int i = 0; i < length; i++)
+//     {
+//         if (binary[i] == '1')
+//         {
+//             decimal += pow(2, length - i - 1);
+//         }
+//     }
+
+//     return decimal;
+// }
+
+// // Function to convert decimal to binary
+// void decimalToBinary(int decimal)
+// {
+//     int binary[32]; // Array to hold binary number (32 bits)
+//     int index = 0;
+
+//     // Special case for 0
+//     if (decimal == 0)
+//     {
+//         printf("0");
+//         return;
+//     }
+
+//     // Convert decimal to binary
+//     while (decimal > 0)
+//     {
+//         binary[index++] = decimal % 2;
+//         decimal = decimal / 2;
+//     }
+
+//     // Print the binary number in reverse order
+//     for (int i = index - 1; i >= 0; i--)
+//     {
+//         printf("%d", binary[i]);
+//     }
+// }
+
+// int main()
+// {
+//     char binary[32];
+//     int decimal;
+
+//     // Binary to decimal
+//     printf("Enter a binary number: ");
+//     scanf("%s", binary);
+//     int decimalResult = binaryToDecimal(binary);
+//     printf("Binary %s to Decimal is: %d\n", binary, decimalResult);
+
+//     // Decimal to binary
+//     printf("Enter a decimal number: ");
+//     scanf("%d", &decimal);
+//     printf("Decimal %d to Binary is: ", decimal);
+//     decimalToBinary(decimal);
+//     printf("\n");
+
+//     return 0;
+// }
+
+#include <stdio.h>
+
+int main()
+{
+    int arr[8], len = 8;
+    for (int i = 0; i < len; i++)
+    {
+        printf("Enter a decimal number: ");
+        scanf("%d", &arr[i]);
+    }
+
+    return 0;
+}
