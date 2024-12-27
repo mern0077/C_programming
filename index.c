@@ -359,7 +359,7 @@
 
 // =========================================================================================================
 
-// question 13
+// question 15
 // it take position of fibonacci series then its print 
 // data using recursion which replicate itself. it sums 
 // value fibo=fibo(number-1)+fibo(number-2);
@@ -393,7 +393,7 @@
 
 // =========================================================================================================
 
-// question 14
+// question 16
 // it check prime number from 2 to input value
 // then if input value equal to zero so not prime 
 //else prime.
@@ -424,7 +424,7 @@
 
 // =========================================================================================================
 
-// question 15
+// question 17
 // it used object ( key value pair ) when input value gave
 // so his value point that value hence it converted into number.
 // #include <stdio.h>
@@ -501,7 +501,7 @@
 
 // =========================================================================================================
 
-// question 16
+// question 18
 // we create a temp which store end value
 //then end value assined initial value then
 // initial value assigned starting value.
@@ -541,7 +541,7 @@
 
 // =========================================================================================================
 
-// question 17
+// question 20
 
 // we are doing traverse so if binary equal to 1
 // so it will power of it then sum it.
@@ -617,29 +617,6 @@
 //     return 0;
 // }
 
-
-// =========================================================================================================
-
-// question 18
-// it reverse number using modulus for value reverse for insert
-// n/10 for delete copy value. 
-
-// #include <stdio.h>
-// int main()
-// {
-//     int n, reverse = 0, rem;
-//     printf("Enter a number: ");
-//     scanf("%d", &n);
-//     while (n != 0)
-//     {
-//         rem = n % 10;
-//         reverse = reverse * 10 + rem;
-//         n /= 10;
-//     }
-//     printf("Reversed Number: %d", reverse);
-//     return 0;
-// }
-
 // =========================================================================================================
 
 // question 19
@@ -679,51 +656,7 @@
 
 // =========================================================================================================
 
-// question 19
-//long long for manupulate large amount of data. it take binary number
-// and give you decimal value using square of 1 and sum of spuare. 
-
-// #include <stdio.h>
-
-// long long convert(long long);
-
-// int main()
-// {
-
-//     long long n;
-
-//     printf("Enter a binary number: ");
-//     scanf("%lld", &n);
-
-//     printf("%lld in binary = %lld in decimal", n, convert(n));
-
-//     return 0;
-// }
-
-// long long convert(long long n)
-// {
-
-//     long long dec = 0;
-//     int i = 0, rem;
-
-//     while (n != 0)
-//     {
-
-//         rem = n % 10;
-
-//         dec += rem << i;
-
-//         n /= 10;
-
-//         ++i;
-//     }
-
-//     return dec;
-// }
-
-// =========================================================================================================
-
-// question 20
+// question 21
 // it take size of array and we insert data into array then it will do sum using linear search.
 
 // #include <stdio.h>
@@ -749,7 +682,7 @@
 
 // =========================================================================================================
 
-// question 21
+// question 22
 //  it take size of two array and we insert data into array then it will do sum using linear search both of them together.
 // #include <stdio.h>
 
@@ -780,7 +713,7 @@
 
 // =========================================================================================================
 
-// question 22
+// question 23
 // it take array and first value for min and max value then using for loop it will compare min and max
 // if value is greate it will goes max else it will goes in min
 
@@ -827,7 +760,7 @@
 
 // =========================================================================================================
 
-// question 23
+// question 24
 // we will find out index using search, we use linear search
 // which traverse each array if array[c] equal to search print i
 // else print "not found"
@@ -858,7 +791,7 @@
 
 // =========================================================================================================
 
-// question 24
+// question 25
 // Compare and swap the adjacent elements if they are in the wrong order starting from the first two elements.
 // Do that for all elements moving from left to right. We will get the largest element at the right end.
 
@@ -899,7 +832,7 @@
 
 // =========================================================================================================
 
-// question 25
+// question 26
 // add and multiply two compatible matrices
 // I add and multiply when arr1[i][j]==arr2[i][j]
 
@@ -963,7 +896,7 @@
 
 // =========================================================================================================
 
-// question 26
+// question 27
 
 // we added digonal matrix and off-diognal matrix
 
@@ -972,7 +905,7 @@
 // int main()
 // {
 
-//     int i, j, m = 3, n = 3, a = 0, sum = 0;
+//     int i, j, m = 3, n = 3, sum = 0;
 
 //     int matrix[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
 
@@ -990,19 +923,10 @@
 //             }
 //             printf("\n");
 //         }
-//         for (i = 0; i < m; ++i)
-//         {
-
-//             sum = sum + matrix[i][i];
-
-//             a = a + matrix[i][m - i - 1];
-//         }
 
 //         printf("\nMain diagonal elements sum is = %d\n", sum);
-//         printf("Off-diagonal elements sum is = %d\n", a);
 //     }
 //     else
-
 //         printf("not a square matrix\n");
 //     return 0;
 // }
@@ -1010,7 +934,7 @@
 
 // =========================================================================================================
 
-// question 27
+// question 28
 
 // strlen is build in function which is use for find length of char,
 // strcpy is build in function which is use for copy value into  other char,
@@ -1038,7 +962,7 @@
 
 // =========================================================================================================
 
-// question 28
+// question 29
 
 // this is project.
 
@@ -1259,7 +1183,7 @@
 
 // =========================================================================================================
 
-// question 29
+// question 31
 
 // #include <stdio.h>
 // #include <string.h>
@@ -1316,7 +1240,7 @@
 
 // =========================================================================================================
 
-// question 30
+// question 32
 
 // #include <stdio.h>
 // #include <string.h>
